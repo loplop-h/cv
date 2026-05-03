@@ -784,14 +784,14 @@
         }
 
         .build-stamp {
-            margin-top: 6pt;
-            padding-top: 4pt;
-            border-top: 1px solid var(--hair-2);
-            font-size: 6.5pt;
+            margin-top: 4pt;
+            padding-top: 3pt;
+            border-top: 1px dotted var(--hair);
+            font-size: 5.5pt;
             color: var(--muted-2);
             font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 0.3px;
-            text-align: right;
+            letter-spacing: 0.2px;
+            line-height: 1.2;
         }
 
         .build-stamp a {
@@ -1002,11 +1002,14 @@
                 </ul>
             </div>
 
-            <!-- QR ONLY -->
+            <!-- QR + BUILD STAMP -->
             <div class="section qr-section">
                 <div class="qr-standalone">
                     <img src="qr-github.png" alt="QR to github.com/loplop-h">
                     <div class="qr-label">SCAN<br><a href="https://github.com/loplop-h">github.com/loplop-h</a></div>
+                </div>
+                <div class="build-stamp">
+                    <a href="https://github.com/loplop-h/cv">loplop-h/cv</a> &middot; {{BUILD_DATE}} &middot; main@{{BUILD_SHA}}
                 </div>
             </div>
 
@@ -1131,10 +1134,6 @@
                 <div class="edu-degree">
                     Bachelor of Engineering in OTIC (ICT &amp; Telecommunications) &mdash; <em>Year 3 of 4</em>
                 </div>
-            </div>
-
-            <div class="build-stamp">
-                Source <a href="https://github.com/loplop-h/cv">github.com/loplop-h/cv</a> &middot; built {{BUILD_DATE}} &middot; main@{{BUILD_SHA}}
             </div>
 
         </div><!-- /col-right -->
