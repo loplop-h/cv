@@ -1,81 +1,186 @@
-# max-cv
+<div align="center">
 
-Source for **Max Ernst Huisman Gutiérrez**'s curriculum vitae.
+# Max Ernst Huisman Gutiérrez · CV
 
-→ [cv-max-huisman-v3.pdf](./cv-max-huisman-v3.pdf) — one page A4, two-column editorial layout
+**Software engineer building developer tools for AI agents — shipping production-grade Python in public.**
 
-About me: [github.com/loplop-h](https://github.com/loplop-h) · [linkedin.com/in/maxernst-huisman](https://linkedin.com/in/maxernst-huisman) · [loplop.xyz](https://loplop.xyz)
+![role](https://img.shields.io/badge/role-AI%2FML_engineer-1F4E79?style=flat-square)
+![location](https://img.shields.io/badge/location-Barcelona-1F4E79?style=flat-square)
+![available](https://img.shields.io/badge/available-summer_2026-1A7F37?style=flat-square)
+![pypi](https://img.shields.io/badge/PyPI-4_packages-E55934?style=flat-square)
+![ci](https://img.shields.io/badge/CI-passing-1A7F37?style=flat-square)
+![coverage](https://img.shields.io/badge/coverage-88%25-1A7F37?style=flat-square)
+![python](https://img.shields.io/badge/python-3.11_%7C_3.12_%7C_3.13-3776AB?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-007EC6?style=flat-square)
 
----
-
-## What this repo is
-
-Most CVs are opaque artifacts — a recruiter receives a PDF and that is the entire surface. This repo is the **source of truth** behind the artifact:
-
-- **[`cv-max-huisman-v3.html`](./cv-max-huisman-v3.html)** — the canonical CV, two-column editorial layout, written as raw HTML + CSS. ~1100 lines.
-- **[`generate_pdf.py`](./generate_pdf.py)** — headless-Chrome renderer that produces a deterministic A4 PDF from the HTML. Forces paper size, embeds fonts, preserves background graphics, and injects a build stamp (date + git short SHA) into the footer at render time.
-- **[`generate_qr.py`](./generate_qr.py)** — regenerator for the embedded QR code that links to my GitHub profile.
-- **[`Makefile`](./Makefile)** — convenience targets for `make build`, `make qr`, `make all`.
-
-The HTML keeps `{{BUILD_DATE}}` and `{{BUILD_SHA}}` placeholders in version control. The renderer replaces them before producing the PDF, then deletes the temp file. The committed HTML stays clean; the rendered PDF is always traceable to a commit.
+</div>
 
 ---
-
-## Build
-
-Requirements:
-- Python 3.12+
-- Chrome installed at the standard path (`C:\Program Files\Google\Chrome\Application\chrome.exe` on Windows)
-- `qrcode[pil]` Python package (`pip install qrcode[pil]`)
 
 ```bash
-make all       # regenerate QR + PDF
-make build     # only PDF (uses existing qr-github.png)
-make qr        # only QR
-make clean     # remove built artifacts and temp files
+$ whoami → ai/ml engineer
+$ pwd    → ~/barcelona
+$ date   → available summer 2026
 ```
 
-Or run scripts directly:
+|       |       |       |       |
+|:------|:------|:------|:------|
+| **4** | **350+** | **88%** | **25K+** |
+| PyPI packages | Tests shipped | Branch coverage | Launch impressions |
+
+---
+
+## About
+
+Third-year engineering student at **La Salle Barcelona** maintaining **four Python packages on PyPI** for AI-agent tooling — observability, cost tracking, security and code quality for Claude Code workflows.
+
+Shipped **four hot-fix releases in 48h** after rewind's launch, all triggered by a real-session smoke test that caught two Windows-only bugs CI had missed. mypy strict, multi-OS CI green, release notes treated like product changelogs.
+
+**Open to AI/ML engineering roles in Barcelona — summer 2026.**
+
+---
+
+## Contact
+
+| | |
+|--|--|
+| **email** | [maxernstprojects@gmail.com](mailto:maxernstprojects@gmail.com) |
+| **phone** | +34 666 459 920 |
+| **github** | [github.com/loplop-h](https://github.com/loplop-h) |
+| **linkedin** | [linkedin.com/in/maxernst-huisman](https://linkedin.com/in/maxernst-huisman) |
+| **site** | [loplop.xyz](https://loplop.xyz) |
+
+---
+
+## Selected projects
+
+### [`rewind`](https://github.com/loplop-h/rewind) — time-travel debugger for AI agent sessions
+
+[![PyPI](https://img.shields.io/badge/PyPI-rewindx-1F4E79?style=flat-square)](https://pypi.org/project/rewindx/) ![version](https://img.shields.io/badge/version-v0.1.4-grey?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-007EC6?style=flat-square)
 
 ```bash
-python generate_qr.py
-python generate_pdf.py
+$ pip install rewindx
+$ rewind cc setup
+✓ Hooks installed in ~/.claude/settings.json
+# Time-travel debugging is now active.
 ```
 
-The renderer starts a local HTTP server on port 8765 so the QR PNG and Google Fonts both load correctly during print.
+- ✓ Captures every prompt, tool call, file edit and cost into a per-session SQLite (WAL) + content-addressed blob store; enables timeline scrub, rollback, undo, privacy-masked Markdown export
+- ✓ **141 tests · 88% branch coverage** · CI green on Python 3.11/3.12/3.13 across **Linux · macOS · Windows** — plus a real-session smoke test that caught two Windows-only bugs CI missed
+
+`Python` `anyio` `Click` `Rich` `SQLite (WAL)` `content-addressed storage` `pytest` `ruff` `mypy strict`
 
 ---
 
-## Visual design notes
+### `STRATUM` — regulatory intelligence platform for pharma
 
-- **Two-column grid** (35% / 65%) using CSS Grid with `minmax(0, fr)` to prevent gap overflow
-- **Stat strip** with one anchor metric in coral (16pt 800) — the others muted as supporting
-- **Coral metric underlines** (`linear-gradient(transparent 60%, ...)`) on quantified facts inline
-- **FEATURED project** treatment: 3px coral left border + ~5% coral background tint
-- **Code block** with terminal styling, slate background, JetBrains Mono, coral left border
-- **QR code** auto-pushed to bottom of left column via `margin-top: auto` on flex sidebar
-- **Recent ships timeline** with status dots; live entry marked by a coral pulse-ring dot
-- **Inter** for body and headers, **JetBrains Mono** for code, metadata, and timeline labels
-- **Build stamp** in muted monospace at the bottom right — date + commit SHA + repo URL
+[![site](https://img.shields.io/badge/site-loplop.xyz-1F4E79?style=flat-square)](https://loplop.xyz) ![status](https://img.shields.io/badge/status-live-1A7F37?style=flat-square)
 
-The CV fits 1 page A4 with 17 hyperlinks preserved as PDF link annotations.
+- ✓ Full-stack AI platform extracting FDA Complete Response Letters & EMA objections for compliance teams — processed **28,961 FDA · 418 CRLs · 3,307 objections · 2,296 EMA** through NLP + graph knowledge representation
+- ✓ Multi-store data model: **PostgreSQL** (relational), **Neo4j** (graph), **Weaviate** (vector) — multi-dimensional regulatory search across structured, semantic and relational dimensions
+
+`Python` `FastAPI` `Next.js` `PostgreSQL` `Neo4j` `Weaviate` `Claude API`
 
 ---
 
-## Why open-source the CV
+### [`spent`](https://github.com/loplop-h/spent) — cost tracker for AI agent sessions
 
-Because if you're hiring me, you're hiring my judgment about how to ship things. The CV itself is something I shipped — read the source the same way you'd read any other repo of mine.
+[![PyPI](https://img.shields.io/badge/PyPI-spent-1F4E79?style=flat-square)](https://pypi.org/project/spent/) ![version](https://img.shields.io/badge/version-v0.5.1-grey?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-007EC6?style=flat-square)
 
-Fork the layout if you want it for your own CV. MIT licensed.
+- ✓ Real-time terminal dashboard tracking AI session costs with model detection, per-model breakdown and token-level analysis
+- ✓ **220+ tests** · launch post reached **25K+ impressions, 100+ engagements** on LinkedIn
 
----
-
-## Build stamp
-
-Every render embeds the date and current `git rev-parse --short HEAD` into the footer. If the file says `built 2026-05-03 · main@4f8a2c1`, that's a verifiable claim against this repo's history.
+`Python` `Rich` `SQLite` `JSONL` `Claude Code Hooks`
 
 ---
 
-## License
+### [`mcpguard`](https://github.com/loplop-h/mcpguard) · [`debtx`](https://github.com/loplop-h/debtx)
 
-[MIT](./LICENSE)
+| Project | What it does | PyPI |
+|---------|--------------|------|
+| [**mcpguard**](https://github.com/loplop-h/mcpguard) | OWASP MCP Top 10 security scanner via AST analysis | [`guardmcp`](https://pypi.org/project/guardmcp/) |
+| [**debtx**](https://github.com/loplop-h/debtx) | A–F static-analysis grader for AI-generated code | [`debtx`](https://pypi.org/project/debtx/) |
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| **code** | `Python`, `TypeScript`, `SQL` |
+| **ai / ml** | `Claude API`, `MCP`, LLM integration, NLP, prompt engineering |
+| **backend** | `FastAPI`, `Next.js`, `anyio`, `Click`, `Rich` |
+| **data** | `PostgreSQL`, `SQLite (WAL)`, `Neo4j`, `Weaviate` |
+| **tooling** | `pytest`, `ruff`, `mypy strict`, multi-OS GitHub Actions, Docker |
+
+---
+
+## Recent ships
+
+| When | What |
+|-----|------|
+| **May 2026** | 🟠 First PR to [Anthropic's MCP SDK](https://github.com/modelcontextprotocol/python-sdk/issues/1933) — stdio transport fix |
+| **Apr 2026** | Launched **rewind v0.1.4** on PyPI — 4 hot-fix releases in 48h, all triggered by real-session smoke testing |
+| **Mar 2026** | Shipped **spent v0.5.1** — launch post reached 25K+ impressions, 100+ engagements on LinkedIn |
+| **Jan 2026** | Built **STRATUM** — regulatory-AI platform processing 28K+ FDA + 2.2K EMA documents |
+
+---
+
+## Currently
+
+> **BUILDING** — first PR to [`modelcontextprotocol/python-sdk`](https://github.com/modelcontextprotocol/python-sdk/issues/1933) (issue #1933 — stdio transport fix)
+>
+> **LEARNING** — distributed systems · PostgreSQL internals · DeepLearning.AI Specialization
+
+## Process
+
+- ✓ **mypy strict** — types are non-negotiable
+- ✓ **Real-session smoke tests** — CI alone misses the bugs that bite users
+
+---
+
+## Education & Distinctions
+
+**La Salle Barcelona — Universitat Ramon Llull** · 2023 — Present
+Bachelor of Engineering in OTIC (ICT & Telecommunications) — *Year 3 of 4*
+
+🏆 [**1st place — RSME National Mathematics Competition**](https://rsme.es/ganadores-de-los-concursos-del-dia-internacional-de-las-matematicas/), video category · *Día Internacional de las Matemáticas, 2020*
+
+## Languages
+
+| | | | |
+|---|---|---|---|
+| **Spanish** | `NATIVE` | **Catalan** | `NATIVE` |
+| **English** | `C1` | **Dutch** | `B1` |
+
+## Certifications
+
+| | |
+|---|---|
+| **Machine Learning Specialization** | Stanford / DeepLearning.AI · 2026 |
+| **Generative AI Engineering Professional** | IBM · 2026 |
+| **Claude Code in Action** | Anthropic · 2026 |
+
+---
+
+<details>
+<summary><strong>About this repo</strong> — how the CV is built</summary>
+
+The CV PDF is generated from [`cv-max-huisman-v3.html`](./cv-max-huisman-v3.html) using headless Chrome. The renderer ([`generate_pdf.py`](./generate_pdf.py)) injects a build stamp (date + git short SHA) into the footer at render time, so every PDF is traceable to a commit.
+
+```bash
+make build       # rebuild PDF (regenerates from HTML, embeds build stamp)
+make qr          # rebuild qr-github.png
+make all         # qr + build
+make clean       # remove built artifacts
+```
+
+Why open-source the CV? Because if you're hiring me, you're hiring my judgment about how to ship things. The CV itself is something I shipped — read the source the same way you'd read any other repo of mine. Fork the layout if you want it for your own CV.
+
+[**MIT licensed**](./LICENSE) · [view PDF](./cv-max-huisman-v3.pdf)
+
+</details>
+
+---
+
+<sub><em>"Loplop" — Max Ernst's bird-form alter ego. The surrealist painter who is the namesake's namesake.</em></sub>
