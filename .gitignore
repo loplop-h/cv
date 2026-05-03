@@ -1,0 +1,21 @@
+# build temp
+.stamped-*.html
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# playwright debug (if generated locally)
+.playwright-mcp/

@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Ernst Huisman Gutiérrez — CV — AI Engineer (Open to Roles)</title>
+    <meta name="author" content="Max Ernst Huisman Gutiérrez">
+    <meta name="description" content="Third-year engineering student at La Salle Barcelona maintaining four Python packages on PyPI for AI-agent tooling. Open source contributor. Open to AI/ML roles in Barcelona.">
+    <meta name="keywords" content="AI Engineer, Machine Learning Engineer, Python, MCP, Claude API, Barcelona, La Salle, junior, internship, open source, PyPI">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0A0A0A;
+            --ink-soft: #1F2937;
+            --muted: #6B7280;
+            --muted-2: #9CA3AF;
+            --hair: #E5E7EB;
+            --hair-2: #F3F4F6;
+            --bg: #FFFFFF;
+            --bg-soft: #FAFAFA;
+            --slate: #1F4E79;
+            --slate-light: #3A6FA0;
+            --coral: #E55934;
+            --coral-soft: rgba(229, 89, 52, 0.18);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 9mm 11mm 9mm 11mm;
+        }
+
+        html, body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', 'Calibri', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 9pt;
+            line-height: 1.38;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "kern", "liga", "tnum";
+        }
+
+        body {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 6mm 10mm 6mm 10mm;
+            overflow: hidden;
+        }
+
+        .col-right, .col-left {
+            min-width: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--hair);
+            transition: border-color 0.15s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--slate);
+        }
+
+        /* ─── HEADER ─────────────────────────────────────────────── */
+
+        .header {
+            padding-bottom: 6pt;
+            border-bottom: 1.5px solid var(--ink);
+            margin-bottom: 6pt;
+        }
+
+        .name-block .eyebrow {
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--slate);
+            font-weight: 600;
+            margin-bottom: 4pt;
+        }
+
+        .name-block h1 {
+            font-size: 24pt;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -0.7px;
+            line-height: 0.98;
+        }
+
+        .name-block .tagline {
+            font-size: 10pt;
+            color: var(--ink-soft);
+            margin-top: 4pt;
+            font-weight: 400;
+        }
+
+        .name-block .tagline strong {
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .meta-block {
+            text-align: right;
+            font-size: 7.5pt;
+            color: var(--muted);
+            line-height: 1.5;
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .meta-block .ver {
+            color: var(--slate);
+            font-weight: 600;
+        }
+
+        /* Stat strip */
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            padding: 4pt 0;
+            border-bottom: 1px solid var(--hair);
+            margin-bottom: 5pt;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 10pt;
+            border-left: 2px solid var(--slate);
+            min-width: 0;
+        }
+
+        .stat:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .stat .num {
+            font-size: 12pt;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1;
+            font-feature-settings: "tnum";
+        }
+
+        .stat.anchor .num {
+            color: var(--coral);
+            font-size: 16pt;
+            font-weight: 800;
+        }
+
+        .stat.anchor .lbl {
+            color: var(--coral);
+            opacity: 0.75;
+        }
+
+        .stat .lbl {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: var(--muted);
+            margin-top: 1.5pt;
+            font-weight: 500;
+        }
+
+        /* Contact line */
+        .contact-line {
+            font-size: 8.5pt;
+            color: var(--ink-soft);
+            margin-bottom: 9pt;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 4pt;
+            align-items: baseline;
+        }
+
+        .contact-line .sep {
+            color: var(--muted-2);
+            margin: 0 4pt;
+        }
+
+        .contact-line a {
+            border-bottom-color: transparent;
+            color: var(--ink-soft);
+        }
+
+        .contact-line a:hover {
+            border-bottom-color: var(--slate);
+        }
+
+        /* ─── BODY GRID ──────────────────────────────────────────── */
+
+        .body {
+            display: grid;
+            grid-template-columns: minmax(0, 35fr) minmax(0, 65fr);
+            gap: 14pt;
+        }
+
+        .col-left {
+            padding-right: 10pt;
+            border-right: 1px solid var(--hair);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-left > .qr-section {
+            margin-top: auto;
+            padding-top: 6pt;
+        }
+
+        .col-right {
+            padding-left: 4pt;
+        }
+
+        /* ─── SECTIONS ───────────────────────────────────────────── */
+
+        .section {
+            margin-bottom: 8pt;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--slate);
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            margin-bottom: 5pt;
+            display: flex;
+            align-items: center;
+            gap: 6pt;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 10pt;
+            background: var(--coral);
+            border-radius: 1.5px;
+        }
+
+        /* ─── PROFILE ───────────────────────────────────────────── */
+
+        .profile {
+            font-size: 9.5pt;
+            line-height: 1.4;
+            color: var(--ink);
+        }
+
+        .profile strong {
+            font-weight: 600;
+            background: linear-gradient(transparent 60%, var(--coral-soft) 60%);
+            padding: 0 1pt;
+        }
+
+        /* ─── TIMELINE ──────────────────────────────────────────── */
+
+        .timeline {
+            display: grid;
+            grid-template-columns: 50pt 1fr;
+            gap: 2pt 6pt;
+            font-size: 8pt;
+        }
+
+        .timeline .when {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 7.5pt;
+            color: var(--muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding-top: 1pt;
+        }
+
+        .timeline .what {
+            color: var(--ink);
+            font-weight: 500;
+            border-left: 1.5px solid var(--hair);
+            padding-left: 8pt;
+            position: relative;
+        }
+
+        .timeline .what::before {
+            content: "";
+            position: absolute;
+            left: -4px;
+            top: 4pt;
+            width: 6px;
+            height: 6px;
+            background: var(--slate);
+            border-radius: 50%;
+        }
+
+        .timeline .what.now::before {
+            background: var(--coral);
+            box-shadow: 0 0 0 3px var(--coral-soft);
+        }
+
+        .timeline .what em {
+            font-style: normal;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        /* ─── PROJECTS ──────────────────────────────────────────── */
+
+        .project {
+            margin-bottom: 6pt;
+            page-break-inside: avoid;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project.compact {
+            margin-bottom: 3pt;
+        }
+
+        .project.featured {
+            padding: 5pt 10pt 5pt 10pt;
+            margin: -2pt -4pt 7pt -10pt;
+            border-left: 3px solid var(--coral);
+            background: rgba(229, 89, 52, 0.055);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .project-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2pt;
+            gap: 8pt;
+        }
+
+        .project-name {
+            font-size: 11pt;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.2px;
+        }
+
+        .project-name a {
+            color: var(--ink);
+            border: none;
+            text-decoration: none;
+        }
+
+        .project-name a:hover {
+            color: var(--slate);
+        }
+
+        .project-meta a.pill {
+            text-decoration: none;
+        }
+
+        .project-name .desc {
+            font-weight: 400;
+            color: var(--ink-soft);
+            font-size: 9.5pt;
+            margin-left: 4pt;
+        }
+
+        .project-meta {
+            font-size: 7.5pt;
+            color: var(--muted);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            display: flex;
+            gap: 4pt;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        .project-meta .pill {
+            white-space: nowrap;
+        }
+
+        .project-meta .pill {
+            background: var(--bg-soft);
+            border: 1px solid var(--hair);
+            padding: 1pt 4pt;
+            border-radius: 3px;
+            color: var(--ink-soft);
+        }
+
+        .project-meta .pill.pypi {
+            color: var(--slate);
+            border-color: var(--slate);
+        }
+
+        .project-meta a {
+            border: none;
+        }
+
+        .project ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 2pt;
+        }
+
+        .project li {
+            padding-left: 11pt;
+            position: relative;
+            font-size: 8.5pt;
+            line-height: 1.35;
+            margin-bottom: 1pt;
+            color: var(--ink);
+        }
+
+        .project li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--coral);
+            font-weight: 600;
+        }
+
+        .project .metric {
+            background: linear-gradient(transparent 60%, var(--coral-soft) 60%);
+            padding: 0 1pt;
+            font-weight: 500;
+        }
+
+        .tech-line {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 7.5pt;
+            color: var(--muted);
+            padding-left: 11pt;
+            margin-top: 3pt;
+            letter-spacing: 0.3px;
+        }
+
+        /* ─── CODE BLOCK ────────────────────────────────────────── */
+
+        .code-block {
+            background: #0F1C30;
+            color: #E8EEF7;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 7.5pt;
+            line-height: 1.45;
+            padding: 4pt 7pt;
+            border-radius: 4px;
+            margin: 4pt 0 3pt 11pt;
+            border-left: 3px solid var(--coral);
+            max-width: 100%;
+            overflow-wrap: anywhere;
+        }
+
+        .code-block .prompt {
+            color: #76C8FF;
+            user-select: none;
+        }
+
+        .code-block .ok {
+            color: #95F2A8;
+        }
+
+        .code-block .comment {
+            color: #6B89B5;
+        }
+
+        /* ─── SIDEBAR LISTS ─────────────────────────────────────── */
+
+        .glance-list {
+            list-style: none;
+            font-size: 9pt;
+        }
+
+        .glance-list li {
+            padding-left: 11pt;
+            position: relative;
+            margin-bottom: 1pt;
+            color: var(--ink);
+            line-height: 1.32;
+        }
+
+        .glance-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--slate);
+            font-size: 7.5pt;
+            top: 1pt;
+        }
+
+        .glance-list .metric {
+            background: linear-gradient(transparent 60%, var(--coral-soft) 60%);
+            padding: 0 1pt;
+            font-weight: 500;
+        }
+
+        /* ─── STACK ─────────────────────────────────────────────── */
+
+        .stack-group {
+            display: grid;
+            grid-template-columns: 50pt 1fr;
+            gap: 4pt;
+            margin-bottom: 1pt;
+            align-items: baseline;
+        }
+
+        .stack-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .stack-group .group-label {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .stack-group .items {
+            font-size: 8pt;
+            color: var(--ink);
+            line-height: 1.32;
+        }
+
+        .stack-group .items .primary {
+            font-weight: 600;
+        }
+
+        /* ─── CERTS ─────────────────────────────────────────────── */
+
+        .cert-list {
+            list-style: none;
+            font-size: 8.5pt;
+        }
+
+        .cert-list li {
+            position: relative;
+            margin-bottom: 2pt;
+            padding-left: 11pt;
+            color: var(--ink);
+            line-height: 1.28;
+        }
+
+        .cert-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--coral);
+            font-weight: 700;
+            font-size: 8pt;
+            top: 0;
+        }
+
+        .cert-list .name {
+            font-weight: 600;
+        }
+
+        .cert-list .issuer {
+            color: var(--muted);
+            font-size: 7.5pt;
+            display: inline;
+            margin-left: 2pt;
+        }
+
+        /* ─── LANGUAGES ─────────────────────────────────────────── */
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2pt 6pt;
+            font-size: 8.5pt;
+        }
+
+        .lang-name {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .lang-level {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 7.5pt;
+            color: var(--muted);
+            text-align: right;
+        }
+
+        /* ─── TENET LIST (Process) ──────────────────────────────── */
+
+        .tenet-list {
+            list-style: none;
+            font-size: 8pt;
+        }
+
+        .tenet-list li {
+            padding-left: 11pt;
+            position: relative;
+            margin-bottom: 2pt;
+            color: var(--ink);
+            line-height: 1.32;
+        }
+
+        .tenet-list li::before {
+            content: "▎";
+            position: absolute;
+            left: 2pt;
+            color: var(--coral);
+            font-size: 8pt;
+            line-height: 1;
+        }
+
+        /* ─── CURRENTLY (compact) ───────────────────────────────── */
+
+        .currently-compact {
+            font-size: 8.5pt;
+            display: flex;
+            flex-direction: column;
+            gap: 3pt;
+        }
+
+        .cc-row {
+            display: grid;
+            grid-template-columns: 50pt 1fr;
+            gap: 4pt;
+            align-items: baseline;
+        }
+
+        .cc-label {
+            font-size: 7pt;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        .cc-text {
+            color: var(--ink);
+            line-height: 1.32;
+        }
+
+        .live-dot {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--coral);
+            margin-right: 4pt;
+            vertical-align: middle;
+            box-shadow: 0 0 0 2px var(--coral-soft);
+        }
+
+        /* ─── QR ────────────────────────────────────────────────── */
+
+        .qr-section {
+            margin-top: 6pt;
+        }
+
+        .qr-standalone {
+            display: flex;
+            align-items: center;
+            gap: 8pt;
+        }
+
+        .qr-standalone img {
+            width: 56pt;
+            height: 56pt;
+            flex-shrink: 0;
+        }
+
+        .qr-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 7pt;
+            color: var(--muted);
+            line-height: 1.4;
+            letter-spacing: 0.3px;
+        }
+
+        /* ─── EDUCATION ─────────────────────────────────────────── */
+
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1pt;
+        }
+
+        .edu-school {
+            font-weight: 700;
+            font-size: 10pt;
+            color: var(--ink);
+        }
+
+        .edu-location {
+            font-size: 8pt;
+            color: var(--muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .edu-degree {
+            font-size: 9pt;
+            color: var(--ink-soft);
+            margin-top: 1pt;
+        }
+
+        .edu-degree em {
+            font-style: normal;
+            color: var(--coral);
+            font-weight: 600;
+        }
+
+        /* ─── CURRENTLY ─────────────────────────────────────────── */
+
+        .currently {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12pt;
+        }
+
+        .currently h4 {
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 3pt;
+        }
+
+        .currently ul {
+            list-style: none;
+            font-size: 8.5pt;
+        }
+
+        .currently li {
+            padding-left: 11pt;
+            position: relative;
+            margin-bottom: 2pt;
+            color: var(--ink);
+            line-height: 1.32;
+        }
+
+        .currently li::before {
+            content: "·";
+            position: absolute;
+            left: 3pt;
+            color: var(--slate);
+            font-size: 12pt;
+            line-height: 0;
+            top: 5pt;
+        }
+
+        .currently li.live::before {
+            content: "●";
+            color: var(--coral);
+            font-size: 7pt;
+            top: 4pt;
+            left: 0;
+        }
+
+        /* ─── FOOTER ────────────────────────────────────────────── */
+
+        .cv-stamp {
+            margin-top: 8pt;
+            padding-top: 5pt;
+            border-top: 1px solid var(--hair);
+            font-size: 7pt;
+            color: var(--muted);
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.4px;
+        }
+
+        .cv-stamp a {
+            border: none;
+            color: var(--slate);
+        }
+
+        .build-stamp {
+            margin-top: 6pt;
+            padding-top: 4pt;
+            border-top: 1px solid var(--hair-2);
+            font-size: 6.5pt;
+            color: var(--muted-2);
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.3px;
+            text-align: right;
+        }
+
+        .build-stamp a {
+            border: none;
+            color: var(--slate);
+        }
+
+        .footer .right {
+            color: var(--slate);
+        }
+
+        /* ─── PRINT ─────────────────────────────────────────────── */
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: none;
+                font-size: 9pt;
+            }
+
+            a {
+                color: var(--ink) !important;
+                border-bottom: none !important;
+            }
+
+            .section,
+            .project,
+            .timeline,
+            .header {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .stat,
+            .section-title::before,
+            .project li::before,
+            .cert-list li::before,
+            .timeline .what::before,
+            .profile strong,
+            .project .metric,
+            .code-block,
+            .project.featured,
+            .stat.anchor .num,
+            .live-dot {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .meta-block,
+            .footer {
+                color: var(--muted) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════
+         HEADER
+         ════════════════════════════════════════════════════════════ -->
+    <div class="header">
+        <div class="name-block">
+            <div class="eyebrow">Python · AI agent tooling · Barcelona</div>
+            <h1>Max Ernst Huisman Guti&eacute;rrez</h1>
+            <div class="tagline">
+                Software engineer building <strong>developer tools for AI agents</strong> &mdash;
+                shipping production-grade Python in public.
+            </div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════
+         STAT STRIP
+         ════════════════════════════════════════════════════════════ -->
+    <div class="stat-strip">
+        <div class="stat anchor">
+            <div class="num">4</div>
+            <div class="lbl">PyPI packages</div>
+        </div>
+        <div class="stat">
+            <div class="num">350+</div>
+            <div class="lbl">Tests shipped</div>
+        </div>
+        <div class="stat">
+            <div class="num">88%</div>
+            <div class="lbl">Branch coverage</div>
+        </div>
+        <div class="stat">
+            <div class="num">25K+</div>
+            <div class="lbl">Launch impressions</div>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════
+         CONTACT
+         ════════════════════════════════════════════════════════════ -->
+    <div class="contact-line">
+        <a href="mailto:maxernstprojects@gmail.com">maxernstprojects@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="tel:+34666459920">+34 666 459 920</a>
+        <span class="sep">·</span>
+        <a href="https://linkedin.com/in/maxernst-huisman">linkedin.com/in/maxernst-huisman</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/loplop-h">github.com/loplop-h</a>
+        <span class="sep">·</span>
+        <a href="https://loplop.xyz">loplop.xyz</a>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════
+         BODY GRID
+         ════════════════════════════════════════════════════════════ -->
+    <div class="body">
+
+        <!-- ──────────────────────── LEFT COLUMN ──────────────────────── -->
+        <div class="col-left">
+
+            <!-- STACK -->
+            <div class="section">
+                <div class="section-title">Stack</div>
+                <div class="stack-group">
+                    <div class="group-label">Code</div>
+                    <div class="items"><span class="primary">Python</span>, TypeScript, SQL</div>
+                </div>
+                <div class="stack-group">
+                    <div class="group-label">AI / ML</div>
+                    <div class="items"><span class="primary">Claude API</span>, <span class="primary">MCP</span>, LLM integration, NLP, prompt engineering</div>
+                </div>
+                <div class="stack-group">
+                    <div class="group-label">Backend</div>
+                    <div class="items"><span class="primary">FastAPI</span>, Next.js, anyio, Click, <span class="primary">Rich</span></div>
+                </div>
+                <div class="stack-group">
+                    <div class="group-label">Data</div>
+                    <div class="items"><span class="primary">PostgreSQL</span>, SQLite WAL, Neo4j, Weaviate</div>
+                </div>
+                <div class="stack-group">
+                    <div class="group-label">Tooling</div>
+                    <div class="items">pytest, ruff, mypy strict, multi-OS GitHub Actions, Docker</div>
+                </div>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div class="section">
+                <div class="section-title">Languages</div>
+                <div class="lang-grid">
+                    <span class="lang-name">Spanish</span><span class="lang-level">NATIVE</span>
+                    <span class="lang-name">Catalan</span><span class="lang-level">NATIVE</span>
+                    <span class="lang-name">English</span><span class="lang-level">C1</span>
+                    <span class="lang-name">Dutch</span><span class="lang-level">B1</span>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="section">
+                <div class="section-title">Certifications</div>
+                <ul class="cert-list">
+                    <li>
+                        <span class="name">ML Specialization</span><span class="issuer">Stanford / DeepLearning.AI &middot; 2026</span>
+                    </li>
+                    <li>
+                        <span class="name">GenAI Engineering Professional</span><span class="issuer">IBM &middot; 2026</span>
+                    </li>
+                    <li>
+                        <span class="name">Claude Code in Action</span><span class="issuer">Anthropic &middot; 2026</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- RECENT SHIPS / TIMELINE -->
+            <div class="section">
+                <div class="section-title">Recent ships</div>
+                <div class="timeline">
+                    <span class="when">May 2026</span>
+                    <span class="what now">First PR to <strong><a href="https://github.com/modelcontextprotocol/python-sdk/issues/1933">Anthropic's MCP SDK</a></strong> <em>&mdash; stdio fix</em></span>
+
+                    <span class="when">Apr 2026</span>
+                    <span class="what">Launched <strong>rewind v0.1.4</strong> &mdash; <em>4 hot-fix releases in 48h</em></span>
+
+                    <span class="when">Mar 2026</span>
+                    <span class="what">Shipped <strong>spent v0.5.1</strong> &mdash; <em>25K+ impressions</em></span>
+
+                    <span class="when">Jan 2026</span>
+                    <span class="what">Built <strong>STRATUM</strong> &mdash; <em>28K+ FDA / 2K EMA pipeline</em></span>
+                </div>
+            </div>
+
+            <!-- CURRENTLY -->
+            <div class="section">
+                <div class="section-title">Currently</div>
+                <div class="currently-compact">
+                    <div class="cc-row">
+                        <span class="cc-label">BUILDING</span>
+                        <span class="cc-text"><span class="live-dot"></span>First PR to <strong><a href="https://github.com/modelcontextprotocol/python-sdk/issues/1933">Anthropic's MCP SDK</a></strong> &mdash; stdio fix</span>
+                    </div>
+                    <div class="cc-row">
+                        <span class="cc-label">LEARNING</span>
+                        <span class="cc-text">Distributed systems · PostgreSQL internals · DeepLearning.AI Specialization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROCESS / TENETS -->
+            <div class="section">
+                <div class="section-title">Process</div>
+                <ul class="tenet-list">
+                    <li><strong>mypy strict</strong> &mdash; types non-negotiable</li>
+                    <li><strong>Real-session smoke tests</strong> &mdash; CI misses the bugs that bite users</li>
+                </ul>
+            </div>
+
+            <!-- QR ONLY -->
+            <div class="section qr-section">
+                <div class="qr-standalone">
+                    <img src="qr-github.png" alt="QR to github.com/loplop-h">
+                    <div class="qr-label">SCAN<br><a href="https://github.com/loplop-h">github.com/loplop-h</a></div>
+                </div>
+            </div>
+
+        </div><!-- /col-left -->
+
+
+        <!-- ──────────────────────── RIGHT COLUMN ──────────────────────── -->
+        <div class="col-right">
+
+            <!-- PROFILE -->
+            <div class="section">
+                <div class="section-title">Profile</div>
+                <p class="profile">
+                    Third-year engineering student at La Salle Barcelona maintaining
+                    <strong>four Python packages on PyPI</strong> for AI-agent tooling
+                    &mdash; observability, cost tracking, security and code quality for Claude Code workflows.
+                    Shipped <strong>four hot-fix releases in 48h</strong> after rewind's launch, all triggered by
+                    a real-session smoke test that caught two Windows-only bugs CI had missed.
+                    mypy strict, multi-OS CI green, release notes treated like product changelogs.
+                    <strong>Open to AI/ML engineering roles in Barcelona &mdash; summer 2026.</strong>
+                </p>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="section">
+                <div class="section-title">Selected projects</div>
+
+                <!-- rewind -->
+                <div class="project featured">
+                    <div class="project-head">
+                        <div class="project-name">
+                            <a href="https://github.com/loplop-h/rewind">rewind</a><span class="desc">— time-travel debugger for AI agent sessions</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://pypi.org/project/rewindx/" class="pill pypi">PyPI · rewindx</a>
+                            <span class="pill">v0.1.4</span>
+                            <span class="pill">MIT</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Captures every prompt, tool call, file edit and cost into a per-session SQLite (WAL) + content-addressed blob store; enables timeline scrub, rollback, undo, privacy-masked Markdown export</li>
+                        <li><span class="metric">141 tests · 88% branch coverage</span> · CI green on Python 3.11/3.12/3.13 across <span class="metric">Linux · macOS · Windows</span></li>
+                        <li>Two production bugs caught only by a <strong>real-session smoke test</strong> &mdash; Windows cp1252 stdout crash and bash-on-Windows backslash escape &mdash; both shipped within 24h</li>
+                    </ul>
+                    <div class="code-block">
+<span class="prompt">$</span> pip install rewindx
+<span class="prompt">$</span> rewind cc setup
+  <span class="ok">✓ Hooks installed in ~/.claude/settings.json</span>
+  <span class="comment"># Time-travel debugging is now active.</span>
+                    </div>
+                    <div class="tech-line">Python · anyio · Click · Rich · SQLite (WAL) · content-addressed storage · pytest · ruff · mypy strict</div>
+                </div>
+
+                <!-- STRATUM -->
+                <div class="project">
+                    <div class="project-head">
+                        <div class="project-name">
+                            STRATUM<span class="desc">— regulatory intelligence platform for pharma</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://loplop.xyz" class="pill">loplop.xyz</a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Full-stack AI platform extracting FDA Complete Response Letters &amp; EMA objections for compliance teams &mdash; processed <span class="metric">28,961 FDA · 418 CRLs · 3,307 objections · 2,296 EMA</span> through NLP + graph knowledge representation</li>
+                        <li>Multi-store data model: <span class="metric">PostgreSQL (relational), Neo4j (graph), Weaviate (vector)</span> &mdash; multi-dimensional regulatory search across structured, semantic and relational dimensions</li>
+                    </ul>
+                    <div class="tech-line">Python · FastAPI · Next.js · PostgreSQL · Neo4j · Weaviate</div>
+                </div>
+
+                <!-- spent -->
+                <div class="project">
+                    <div class="project-head">
+                        <div class="project-name">
+                            <a href="https://github.com/loplop-h/spent">spent</a><span class="desc">— cost tracker for AI agent sessions</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://pypi.org/project/spent/" class="pill pypi">PyPI · spent</a>
+                            <span class="pill">v0.5.1</span>
+                            <span class="pill">MIT</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Real-time terminal dashboard tracking AI session costs with model detection, per-model breakdown and token-level analysis</li>
+                        <li><span class="metric">220+ tests</span>; launch post reached <span class="metric">25K+ impressions, 100+ engagements</span> on LinkedIn</li>
+                    </ul>
+                    <div class="tech-line">Python · Rich · SQLite · JSONL · Claude Code Hooks</div>
+                </div>
+
+                <!-- mcpguard + debtx (compact line) -->
+                <div class="project compact">
+                    <div class="project-head">
+                        <div class="project-name">
+                            <a href="https://github.com/loplop-h/mcpguard">mcpguard</a><span class="desc">— OWASP MCP Top 10 security scanner via AST analysis</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://pypi.org/project/guardmcp/" class="pill pypi">PyPI · guardmcp</a>
+                            <span class="pill">MIT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project compact">
+                    <div class="project-head">
+                        <div class="project-name">
+                            <a href="https://github.com/loplop-h/debtx">debtx</a><span class="desc">— A&ndash;F static-analysis grader for AI-generated code</span>
+                        </div>
+                        <div class="project-meta">
+                            <a href="https://pypi.org/project/debtx/" class="pill pypi">PyPI · debtx</a>
+                            <span class="pill">MIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="edu-row">
+                    <div class="edu-school">La Salle Barcelona &mdash; Universitat Ramon Llull</div>
+                    <div class="edu-location">2023 &mdash; Present</div>
+                </div>
+                <div class="edu-degree">
+                    Bachelor of Engineering in OTIC (ICT &amp; Telecommunications) &mdash; <em>Year 3 of 4</em>
+                </div>
+            </div>
+
+            <div class="build-stamp">
+                Source <a href="https://github.com/loplop-h/cv">github.com/loplop-h/cv</a> &middot; built {{BUILD_DATE}} &middot; main@{{BUILD_SHA}}
+            </div>
+
+        </div><!-- /col-right -->
+
+    </div><!-- /body -->
+
+</body>
+</html>
