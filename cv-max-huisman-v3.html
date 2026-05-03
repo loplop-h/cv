@@ -718,6 +718,29 @@
             font-weight: 600;
         }
 
+        .edu-award {
+            font-size: 8pt;
+            color: var(--ink);
+            margin-top: 1pt;
+            line-height: 1.3;
+        }
+
+        .edu-award .award-mark {
+            color: var(--coral);
+            font-weight: 700;
+            margin-right: 3pt;
+        }
+
+        .edu-award a {
+            color: var(--ink);
+            border: none;
+        }
+
+        .edu-award em {
+            font-style: normal;
+            color: var(--muted);
+        }
+
         /* ─── CURRENTLY ─────────────────────────────────────────── */
 
         .currently {
@@ -1051,8 +1074,7 @@
                     </div>
                     <ul>
                         <li>Captures every prompt, tool call, file edit and cost into a per-session SQLite (WAL) + content-addressed blob store; enables timeline scrub, rollback, undo, privacy-masked Markdown export</li>
-                        <li><span class="metric">141 tests · 88% branch coverage</span> · CI green on Python 3.11/3.12/3.13 across <span class="metric">Linux · macOS · Windows</span></li>
-                        <li>Two production bugs caught only by a <strong>real-session smoke test</strong> &mdash; Windows cp1252 stdout crash and bash-on-Windows backslash escape &mdash; both shipped within 24h</li>
+                        <li><span class="metric">141 tests · 88% branch coverage</span> · CI green on Python 3.11/3.12/3.13 across <span class="metric">Linux · macOS · Windows</span> &mdash; plus a <strong>real-session smoke test</strong> that caught two Windows-only bugs CI missed</li>
                     </ul>
                     <div class="code-block">
 <span class="prompt">$</span> pip install rewindx
@@ -1126,13 +1148,17 @@
 
             <!-- EDUCATION -->
             <div class="section">
-                <div class="section-title">Education</div>
+                <div class="section-title">Education &amp; Distinctions</div>
                 <div class="edu-row">
                     <div class="edu-school">La Salle Barcelona &mdash; Universitat Ramon Llull</div>
                     <div class="edu-location">2023 &mdash; Present</div>
                 </div>
                 <div class="edu-degree">
                     Bachelor of Engineering in OTIC (ICT &amp; Telecommunications) &mdash; <em>Year 3 of 4</em>
+                </div>
+                <div class="edu-award">
+                    <span class="award-mark">▎</span>
+                    <a href="https://rsme.es/ganadores-de-los-concursos-del-dia-internacional-de-las-matematicas/"><strong>1st place &mdash; RSME National Math Competition</strong></a> <em>· video category, 2020</em>
                 </div>
             </div>
 
