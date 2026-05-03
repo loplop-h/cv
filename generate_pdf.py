@@ -35,7 +35,6 @@ SERVER_PORT = 8765
 
 JOBS: list[tuple[str, str]] = [
     ("cv-max-huisman-v3.html", "cv-max-huisman-v3.pdf"),
-    ("cv-max-huisman-v2.html", "cv-max-huisman-v2.pdf"),
 ]
 
 

@@ -2,8 +2,7 @@
 
 Source for **Max Ernst Huisman Gutiérrez**'s curriculum vitae.
 
-→ [cv-max-huisman-v3.pdf](./cv-max-huisman-v3.pdf) (canonical, one page A4, editorial layout)
-→ [cv-max-huisman-v2.pdf](./cv-max-huisman-v2.pdf) (single-column ATS-strict fallback)
+→ [cv-max-huisman-v3.pdf](./cv-max-huisman-v3.pdf) — one page A4, two-column editorial layout
 
 About me: [github.com/loplop-h](https://github.com/loplop-h) · [linkedin.com/in/maxernst-huisman](https://linkedin.com/in/maxernst-huisman) · [loplop.xyz](https://loplop.xyz)
 
@@ -30,8 +29,8 @@ Requirements:
 - `qrcode[pil]` Python package (`pip install qrcode[pil]`)
 
 ```bash
-make all       # regenerate QR + both PDFs
-make build     # only PDFs (uses existing qr-github.png)
+make all       # regenerate QR + PDF
+make build     # only PDF (uses existing qr-github.png)
 make qr        # only QR
 make clean     # remove built artifacts and temp files
 ```
@@ -59,7 +58,7 @@ The renderer starts a local HTTP server on port 8765 so the QR PNG and Google Fo
 - **Inter** for body and headers, **JetBrains Mono** for code, metadata, and timeline labels
 - **Build stamp** in muted monospace at the bottom right — date + commit SHA + repo URL
 
-The CV fits 1 page A4 with all 17 hyperlinks preserved as PDF link annotations.
+The CV fits 1 page A4 with 17 hyperlinks preserved as PDF link annotations.
 
 ---
 
